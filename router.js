@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const Index = () => import('~/components/index').then(m => m.default || m);
+const Welcome = () => import('~/components/welcome').then(m => m.default || m);
 const Inspire = () => import('~/components/inspire').then(m => m.default || m);
 
 export function createRouter () {
@@ -14,8 +14,8 @@ export function createRouter () {
     routes: [
       {
         path: '/',
-        name: 'index',
-        component: Index
+        name: 'welcome',
+        component: Welcome
       },
       {
         path: '/inspire',
